@@ -22,7 +22,7 @@ jobs:
 
       - name: Check Codespace Status and Keep Alive
         run: |
-          CODESPACE_NAME="-literate-dollop-r4p654p54pg9c66g"
+          CODESPACE_NAME="literate-dollop-r4p654p54pg9c66g"
           STATUS=$(gh codespace list --json name,state | jq -r --arg name "$CODESPACE_NAME" '.[] | select(.name == $name) | .state')
 
           if [ -z "$STATUS" ]; then
